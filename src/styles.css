@@ -1,0 +1,210 @@
+/* =============================================
+   GLOBAL STYLES — Sherene Tolentino
+   ============================================= */
+
+/* ── Light Mode (default) ── */
+:root {
+  --black:      #1a1a1a;
+  --white:      #fafaf8;
+  --grey:       #5a5558;
+  --terracotta: #c4795b;
+  --sage:       #8b9d83;
+  --beige:      #EBE8E1;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', sans-serif;
+
+  --bg-primary:   #fafaf8;
+  --bg-secondary: #EBE8E1;
+  --text-primary: #1a1a1a;
+  --text-muted:   #5a5558;
+  --card-bg:      #fafaf8;
+  --border-color: rgba(90, 85, 88, 0.13);
+  --shadow-color: rgba(26, 26, 26, 0.1);
+}
+
+/* ── Dark Mode ── */
+[data-theme="dark"] {
+  --black:      #f0ede8;
+  --white:      #1c1a1b;
+  --grey:       #a89fa3;
+  --terracotta: #d4896b;
+  --beige:      #2a2628;
+
+  --bg-primary:   #1c1a1b;
+  --bg-secondary: #2a2628;
+  --text-primary: #f0ede8;
+  --text-muted:   #a89fa3;
+  --card-bg:      #242122;
+  --border-color: rgba(240, 237, 232, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.35);
+}
+
+/* ── Body background ── */
+body {
+  background-color: var(--bg-primary) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── Smooth transitions ── */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* =============================================
+   DARK MODE TEXT & BACKGROUND FIXES
+   Targeting exact class names from each page CSS
+   ============================================= */
+
+/* ── ALL headings ── */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #f0ede8 !important;
+}
+
+/* ── ALL paragraphs ── */
+[data-theme="dark"] p {
+  color: #f0ede8 !important;
+}
+
+/* ── Muted text classes across all pages ── */
+[data-theme="dark"] .page-header p,
+[data-theme="dark"] .project-description,
+[data-theme="dark"] .stat .label,
+[data-theme="dark"] .meta-label,
+[data-theme="dark"] .detail-item .label,
+[data-theme="dark"] .status-card p,
+[data-theme="dark"] .philosophy-text {
+  color: #a89fa3 !important;
+}
+
+/* ── Labels in forms ── */
+[data-theme="dark"] label {
+  color: #f0ede8 !important;
+}
+
+/* ── List items (about page skills) ── */
+[data-theme="dark"] li {
+  color: #f0ede8 !important;
+}
+
+/* ── Meta values (projects page) ── */
+[data-theme="dark"] .meta-value {
+  color: #f0ede8 !important;
+}
+
+/* ── Form inputs ── */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  color: #f0ede8 !important;
+  background-color: #2a2628 !important;
+  border-color: rgba(240, 237, 232, 0.1) !important;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #a89fa3 !important;
+  opacity: 0.8;
+}
+
+/* ── Section backgrounds — beige sections go dark ── */
+[data-theme="dark"] .page-header,
+[data-theme="dark"] .hero-section,
+[data-theme="dark"] .skills-section,
+[data-theme="dark"] .project-section {
+  background-color: #2a2628 !important;
+}
+
+[data-theme="dark"] .about-preview,
+[data-theme="dark"] .certifications-section,
+[data-theme="dark"] .about-content,
+[data-theme="dark"] .contact-content {
+  background-color: #1c1a1b !important;
+}
+
+/* ── White card backgrounds ── */
+[data-theme="dark"] .form-section,
+[data-theme="dark"] .status-card,
+[data-theme="dark"] .skill-card {
+  background-color: #242122 !important;
+}
+
+/* ── Host/page backgrounds ── */
+[data-theme="dark"] app-contact,
+[data-theme="dark"] app-home,
+[data-theme="dark"] app-about,
+[data-theme="dark"] app-projects,
+[data-theme="dark"] app-resume {
+  background-color: #1c1a1b !important;
+}
+
+/* =============================================
+   ADDITIONAL DARK MODE FIXES — from screenshots
+   ============================================= */
+
+/* About — Design Philosophy box (beige bg, text invisible) */
+[data-theme="dark"] .design-philosophy {
+  background-color: #2a2628 !important;
+}
+
+[data-theme="dark"] .design-philosophy .section-title {
+  color: #d4896b !important;
+}
+
+[data-theme="dark"] .philosophy-text {
+  color: #f0ede8 !important;
+}
+
+/* Projects — CTA section text invisible on beige */
+[data-theme="dark"] .cta-section h2,
+[data-theme="dark"] .cta-section p {
+  color: #f0ede8 !important;
+}
+
+/* Contact — info-card stays light */
+[data-theme="dark"] .info-card {
+  background-color: #242122 !important;
+}
+
+[data-theme="dark"] .info-card h2 {
+  color: #d4896b !important;
+}
+
+[data-theme="dark"] .detail-item a,
+[data-theme="dark"] .detail-item p {
+  color: #f0ede8 !important;
+}
+
+[data-theme="dark"] .detail-item .label {
+  color: #a89fa3 !important;
+}
+
+/* Contact — status card (light beige box) */
+[data-theme="dark"] .status-card {
+  background-color: #242122 !important;
+}
+
+[data-theme="dark"] .status-card h3 {
+  color: #f0ede8 !important;
+}
+
+[data-theme="dark"] .status-card p {
+  color: #a89fa3 !important;
+}
+
+/* About — intro section text */
+[data-theme="dark"] .intro-section h2,
+[data-theme="dark"] .intro-section p {
+  color: #f0ede8 !important;
+}
+
+/* Skills list items on about page */
+[data-theme="dark"] .skills-column ul li,
+[data-theme="dark"] .skills-column h3 {
+  color: #f0ede8 !important;
+}

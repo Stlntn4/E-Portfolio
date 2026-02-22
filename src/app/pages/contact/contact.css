@@ -1,0 +1,501 @@
+/* =============================================
+   CONTACT PAGE — Sherene Tolentino
+   =============================================
+   Fonts loaded in index.html <head>:
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   ============================================= */
+
+/* ── CSS Variables (scoped to this component) ── */
+:host {
+  --black:       #1a1a1a;
+  --white:       #fafaf8;
+  --grey:        #5a5558;
+  --terracotta:  #c4795b;
+  --sage:        #8b9d83;
+  --beige:       #E2E0D8;   /* ← updated: warm greige to match screenshot */
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', sans-serif;
+
+  display: block;
+  background-color: var(--beige); /* ← only change: page background set to beige */
+}
+
+body {
+  background-color: #E2E0D8;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Utility ── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+.page-header {
+  text-align: center;
+  padding: 12rem 2rem 5rem;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.page-header p {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: var(--grey);
+  max-width: 520px;
+  margin-inline: auto;
+  line-height: 1.7;
+}
+
+/* ============================================
+   CONTACT CONTENT
+   ============================================ */
+.contact-content {
+  padding: 2.5rem 0 6rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* ============================================
+   FORM SECTION
+   ============================================ */
+.form-section {
+  background-color: var(--white);
+  padding: 3rem;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.06);
+}
+
+.form-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: -0.01em;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.form-control {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--black);
+  background-color: var(--beige);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 0.875rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-control::placeholder {
+  color: var(--grey);
+  opacity: 0.5;
+}
+
+.form-control:focus {
+  border-color: var(--terracotta);
+  background-color: var(--white);
+}
+
+.form-control.is-invalid {
+  border-color: #c0392b;
+  background-color: #fff5f5;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 160px;
+  line-height: 1.7;
+}
+
+.btn-primary {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--black);
+  border: none;
+  border-radius: 2px;
+  padding: 1rem 2.25rem;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  align-self: flex-start;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--terracotta);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ── Disabled state (while sending) ── */
+.btn-primary:disabled {
+  background-color: var(--grey);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ============================================
+   INFO SECTION
+   ============================================ */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* ── Info Card (Get In Touch) ── */
+.info-card {
+  background-color: var(--black);
+  padding: 3rem;
+  border-radius: 2px;
+}
+
+.info-card h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 400;
+  color: var(--terracotta);
+  letter-spacing: -0.01em;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.detail-item .label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.detail-item a,
+.detail-item p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--white);
+  text-decoration: none;
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.detail-item a:hover {
+  color: var(--terracotta);
+}
+
+/* ── Social Icons ── */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(250, 250, 248, 0.08);
+  border-radius: 2px;
+  color: var(--white);
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-icons a:hover {
+  background-color: var(--terracotta);
+  color: var(--white);
+}
+
+/* ── Status Card ── */
+.status-card {
+  background-color: var(--white);
+  padding: 2.5rem 3rem;
+  border-radius: 2px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.06);
+}
+
+.status-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.875rem;
+}
+
+.status-card p {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.status-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--sage);
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================
+   FORM ALERTS (success / error feedback)
+   ============================================ */
+.form-alert {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  padding: 1rem 1.25rem;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.form-alert--success {
+  background-color: rgba(139, 157, 131, 0.15);
+  color: #4a6b42;
+  border-left: 3px solid var(--sage);
+}
+
+.form-alert--error {
+  background-color: rgba(196, 121, 91, 0.1);
+  color: #a0522d;
+  border-left: 3px solid var(--terracotta);
+}
+
+.form-alert--error a {
+  color: var(--terracotta);
+  text-decoration: underline;
+}
+
+/* ============================================
+   RESPONSIVE — TABLET  (max 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 2.5rem;
+  }
+
+  .page-header {
+    padding: 10rem 2.5rem 4rem;
+  }
+
+  .contact-content {
+    padding: 2rem 0 4.5rem;
+  }
+
+  .contact-grid {
+    gap: 2.5rem;
+  }
+
+  .form-section,
+  .info-card,
+  .status-card {
+    padding: 2.5rem;
+  }
+
+  .form-section h2,
+  .info-card h2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE  (max 768px)
+   Stack contact grid vertically
+   ============================================ */
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+
+  .page-header {
+    padding: 9rem 1.5rem 3rem;
+  }
+
+  .page-header h1 {
+    font-size: clamp(2.75rem, 12vw, 3.5rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .contact-content {
+    padding: 1.5rem 0 4rem;
+  }
+
+  /* Stack to single column */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .form-section {
+    padding: 2rem 1.75rem;
+  }
+
+  .info-card {
+    padding: 2rem 1.75rem;
+  }
+
+  .status-card {
+    padding: 2rem 1.75rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — SMALL MOBILE  (max 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 1.25rem;
+  }
+
+  .page-header {
+    padding: 8.5rem 1.25rem 2.5rem;
+  }
+
+  .page-header h1 {
+    font-size: clamp(2.5rem, 13vw, 3rem);
+  }
+
+  .form-section {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .form-section h2,
+  .info-card h2 {
+    font-size: clamp(1.5rem, 6vw, 1.875rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-form {
+    gap: 1.25rem;
+  }
+
+  .form-control {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9375rem;
+  }
+
+  .info-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .contact-details {
+    gap: 1.5rem;
+  }
+
+  .detail-item a,
+  .detail-item p {
+    font-size: 0.9375rem;
+  }
+
+  .social-icons a {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1rem;
+  }
+
+  .status-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .status-card h3 {
+    font-size: clamp(1.375rem, 6vw, 1.75rem);
+  }
+
+  .status-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .info-section {
+    gap: 1.25rem;
+  }
+}

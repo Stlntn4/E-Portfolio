@@ -1,0 +1,229 @@
+/* =============================================
+   NAVBAR — Sherene Tolentino
+   ============================================= */
+
+.navbar {
+  padding: 1rem 0;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid rgba(90, 85, 88, 0.4);
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Dark mode: slightly lighter navbar surface ── */
+[data-theme="dark"] .navbar {
+  background-color: #111010;
+  border-bottom-color: rgba(240, 237, 232, 0.08);
+}
+
+.navbar.scrolled {
+  padding: 0.6rem 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Container: brand LEFT, controls RIGHT ── */
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* ── Brand + Logo ── */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fafaf8 !important;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-placeholder {
+  width: 36px;
+  height: 36px;
+  background-color: #5a5558;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* ── Theme Toggle Button (inside nav) ── */
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(250, 250, 248, 0.25);
+  border-radius: 50px;
+  padding: 0.3rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #fafaf8;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(196, 121, 91, 0.25);
+  border-color: #c4795b;
+}
+
+/* ── Hamburger toggler ── */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.4rem;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(250,250,248,0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  width: 24px;
+  height: 24px;
+}
+
+/* ── Nav collapse wrapper ── */
+.navbar-collapse {
+  order: 4;
+  flex-basis: 100%;
+}
+
+/* ── Nav links (desktop) ── */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+.nav-link {
+  color: #8b9d83 !important;
+  padding: 0.5rem 0.75rem !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #c4795b !important;
+}
+
+/* ── Hire Me button ── */
+.btn-hire {
+  background-color: transparent !important;
+  border: 1.5px solid #fafaf8;
+  border-radius: 4px;
+  padding: 0.4rem 1.1rem !important;
+  font-weight: 600;
+  color: #fafaf8 !important;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-hire:hover {
+  background-color: #c4795b !important;
+  color: #fafaf8 !important;
+  border-color: #c4795b !important;
+}
+
+/* ============================================
+   TABLET  (≤ 991px) — burger menu active
+   ============================================ */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 0.85rem 0;
+  }
+
+  .navbar .container {
+    flex-wrap: wrap;
+  }
+
+  .navbar-brand {
+    font-size: 1.4rem;
+    flex: 1;
+  }
+
+  /* Full-width dropdown below brand row */
+  .navbar-collapse {
+    width: 100%;
+    flex-basis: 100%;
+    padding: 0.5rem 0 0.75rem;
+    border-top: 1px solid rgba(90, 85, 88, 0.3);
+    margin-top: 0.5rem;
+  }
+
+  /* Stack nav links vertically */
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 0 !important;
+    border-bottom: 1px solid rgba(90, 85, 88, 0.2);
+    font-size: 0.9375rem;
+  }
+
+  .nav-item:last-child .nav-link {
+    border-bottom: none;
+  }
+
+  /* Theme Toggle — full width in mobile menu */
+  .theme-toggle {
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    border: 1.5px solid rgba(250, 250, 248, 0.25);
+  }
+
+  /* Hire Me — full width, centered */
+  .nav-item.ms-lg-3 {
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+
+  .btn-hire {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 1rem !important;
+  }
+}
+
+/* ============================================
+   MOBILE  (≤ 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+    gap: 0.5rem;
+  }
+
+  .logo-placeholder {
+    width: 30px;
+    height: 30px;
+  }
+
+  .theme-toggle {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.55rem;
+  }
+}

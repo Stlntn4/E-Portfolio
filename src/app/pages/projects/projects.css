@@ -1,0 +1,411 @@
+/* =============================================
+   PROJECTS PAGE — Sherene Tolentino
+   ============================================= */
+
+/* ── CSS Variables (scoped to this component) ── */
+:host {
+  --black:       #1a1a1a;
+  --white:       #fafaf8;
+  --grey:        #5a5558;
+  --terracotta:  #c4795b;
+  --sage:        #8b9d83;
+  --beige:       #EBE8E1;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', sans-serif;
+
+  display: block;
+}
+
+/* ── Utility ── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+.page-header {
+  background-color: var(--beige);
+  padding: 11rem 2rem 5rem;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 3rem;
+}
+
+.project-stats {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat .number {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 400;
+  color: var(--terracotta);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.stat .label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--grey);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   PROJECT SECTIONS
+   ============================================ */
+.project-section {
+  padding: 6rem 0;
+  background-color: var(--white);
+}
+
+.project-section + .project-section {
+  border-top: 1px solid var(--beige);
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.project-content.reverse {
+  direction: rtl;
+}
+
+.project-content.reverse > * {
+  direction: ltr;
+}
+
+/* ── Project Image ── */
+.project-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.03);
+}
+
+/* ── Project Details ── */
+.project-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-tags {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.project-tag {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.project-details h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.project-description {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--grey);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* ── Project Meta ── */
+.project-meta {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1.5rem 2.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: start;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.meta-label {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--grey);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.meta-value {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.4;
+}
+
+/* ── View Project Button ── */
+a.view-project-btn {
+  all: unset !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.9375rem !important;
+  font-weight: 500 !important;
+  color: #8b9d83 !important;
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1.5px solid #8b9d83 !important;
+  border-radius: 0 !important;
+  padding: 0 0 0.25rem 0 !important;
+  margin: 0 !important;
+  width: fit-content !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  transition: color 0.2s ease, border-color 0.2s ease !important;
+}
+
+a.view-project-btn:hover,
+a.view-project-btn:focus,
+a.view-project-btn:active {
+  color: #c4795b !important;
+  background: none !important;
+  background-color: transparent !important;
+  border-color: #c4795b !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: none !important;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.cta-section {
+  background-color: var(--black);
+  padding: 7rem 2rem;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
+}
+
+.cta-section p {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 300;
+  color: var(--white);
+  opacity: 0.75;
+  max-width: 540px;
+  margin-inline: auto;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding: 0.875rem 2.25rem;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  letter-spacing: 0.02em;
+  border: none;
+}
+
+.btn-light {
+  background-color: var(--terracotta);
+  color: var(--white);
+  border: 1.5px solid var(--terracotta);
+}
+
+.btn-light:hover {
+  background-color: transparent;
+  color: var(--terracotta);
+}
+
+.btn-outline-light {
+  background-color: transparent;
+  color: var(--white);
+  border: 1.5px solid var(--white);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/* ============================================
+   RESPONSIVE — TABLET  (max 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 2.5rem;
+  }
+
+  .page-header {
+    padding: 9rem 2.5rem 4rem;
+  }
+
+  .project-stats {
+    gap: 2.5rem;
+  }
+
+  .project-section {
+    padding: 5rem 0;
+  }
+
+  .project-content {
+    gap: 3rem;
+  }
+
+  .project-meta {
+    grid-template-columns: repeat(3, auto);
+    gap: 1.25rem 2rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE  (max 640px)
+   ============================================ */
+@media (max-width: 640px) {
+  .container {
+    padding-inline: 1.25rem;
+  }
+
+  .page-header {
+    padding: 8rem 1.25rem 3rem;
+  }
+
+  .page-header h1 {
+    font-size: clamp(2.75rem, 13vw, 4rem);
+    margin-bottom: 2rem;
+  }
+
+  .project-stats {
+    gap: 2rem;
+  }
+
+  .stat .number {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  .project-section {
+    padding: 4rem 0;
+  }
+
+  .project-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-content.reverse {
+    direction: ltr;
+  }
+
+  .project-content.reverse .project-image {
+    order: -1;
+  }
+
+  .project-details h2 {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+  }
+
+  .project-description {
+    font-size: 0.9375rem;
+  }
+
+  .project-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem 1.5rem;
+  }
+
+  .cta-section {
+    padding: 5rem 1.25rem;
+  }
+
+  .cta-section h2 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .cta-section p {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+}

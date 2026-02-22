@@ -1,0 +1,101 @@
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Sherene Tolentino</h1>
+            <p class="subtitle">Front-End Designer | UI/UX Focused Web Developer</p>
+            <p class="description">
+                I design clean, responsive, and user-centered interfaces that balance 
+                visual appeal and usability. My focus is on front-end development and UI/UX, 
+                creating digital experiences that are intuitive, accessible, and visually 
+                consistent, and I'm always eager to learn more.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" routerLink="/projects">View Projects</button>
+                <button class="btn btn-outline" routerLink="/contact">Hire Me</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT PREVIEW -->
+<section class="about-preview">
+    <div class="container">
+        <p class="preview-text">
+            I am passionate about crafting seamless user experiences and visually engaging 
+            interfaces. Through personal projects, academic work, and self-learning, I continue to 
+            strengthen my skills in both front-end and basic back-end development, always aiming 
+            to grow as a full-stack capable developer.
+        </p>
+    </div>
+</section>
+
+<!-- SKILLS & EXPERTISE -->
+<section class="skills-section">
+    <div class="container">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Front-End</h3>
+                <p>HTML, CSS, PHP, JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <h3>Design Tools</h3>
+                <p>Figma, Canva, Adobe Illustrator, Wireframing, Prototyping</p>
+            </div>
+            <div class="skill-card">
+                <h3>UX/UI</h3>
+                <p>User Research, User Flow, Accessibility, Responsive Design</p>
+            </div>
+            <div class="skill-card">
+                <h3>Back-End / Database (Basic)</h3>
+                <p>SQL, MongoDB, Node.js concepts</p>
+            </div>
+            <div class="skill-card">
+                <h3>Soft Skills</h3>
+                <p>Creativity, Problem Solving, Attention to Detail, Communication, Leadership</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICATIONS & ACHIEVEMENTS -->
+<section class="certifications-section">
+    <div class="container">
+        <h2 class="section-title">Certifications & Achievements</h2>
+        <div class="cert-grid">
+            <div class="cert-card" (click)="openLightbox('assets/images/cert1.png', 'Certificate 1')">
+                <img src="assets/images/cert1.png" alt="Certificate 1" class="cert-img" />
+                <div class="cert-overlay"><span>View</span></div>
+            </div>
+            <div class="cert-card" (click)="openLightbox('assets/images/cert2.png', 'Certificate 2')">
+                <img src="assets/images/cert2.png" alt="Certificate 2" class="cert-img" />
+                <div class="cert-overlay"><span>View</span></div>
+            </div>
+            <div class="cert-card" (click)="openLightbox('assets/images/cert3.png', 'Certificate 3')">
+                <img src="assets/images/cert3.png" alt="Certificate 3" class="cert-img" />
+                <div class="cert-overlay"><span>View</span></div>
+            </div>
+            <div class="cert-card" (click)="openLightbox('assets/images/cert4.png', 'Certificate 4')">
+                <img src="assets/images/cert4.png" alt="Certificate 4" class="cert-img" />
+                <div class="cert-overlay"><span>View</span></div>
+            </div>
+            <div class="cert-card" (click)="openLightbox('assets/images/cert5.jpg', 'Certificate 5')">
+                <img src="assets/images/cert5.jpg" alt="Certificate 5" class="cert-img" />
+                <div class="cert-overlay"><span>View</span></div>
+            </div>
+            <div class="cert-card" (click)="openLightbox('assets/images/cert6.png', 'Certificate 6')">
+                <img src="assets/images/cert6.png" alt="Certificate 6" class="cert-img" />
+                <div class="cert-overlay"><span>View</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" *ngIf="lightboxOpen" (click)="closeLightbox()">
+    <div class="lightbox-content" (click)="$event.stopPropagation()">
+        <button class="lightbox-close" (click)="closeLightbox()">&#x2715;</button>
+        <img [src]="lightboxImage" [alt]="lightboxAlt" class="lightbox-img" />
+    </div>
+</div>

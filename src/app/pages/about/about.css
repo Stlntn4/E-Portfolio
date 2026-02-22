@@ -1,0 +1,334 @@
+/* =============================================
+   ABOUT PAGE — Sherene Tolentino
+   =============================================
+   Fonts must be loaded in index.html <head>:
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   ============================================= */
+
+/* ── CSS Variables (scoped to this component) ── */
+:host {
+  --black:       #1a1a1a;
+  --white:       #fafaf8;
+  --grey:        #5a5558;
+  --terracotta:  #c4795b;
+  --sage:        #8b9d83;
+  --beige:       #EBE8E1;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', sans-serif;
+
+  display: block;
+}
+
+/* ── Utility ── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+.page-header {
+  text-align: center;
+  padding: 12rem 2rem 5rem;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.page-header p {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: var(--grey);
+  max-width: 520px;
+  margin-inline: auto;
+  line-height: 1.7;
+}
+
+/* ============================================
+   ABOUT CONTENT  (photo + intro)
+   ============================================ */
+.about-content {
+  padding: 2.5rem 0 5rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Placeholder box with X lines */
+.profile-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 360px;
+  background-color: var(--beige);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cline x1='0' y1='0' x2='100%25' y2='100%25' stroke='%235a5558' stroke-width='1'/%3E%3Cline x1='100%25' y1='0' x2='0' y2='100%25' stroke='%235a5558' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.intro-section {
+  padding-top: 0.5rem;
+}
+
+.intro-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.intro-section p {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.intro-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   SKILLS & EXPERTISE
+   — Side margins create the floating rectangle
+   ============================================ */
+.skills-section {
+  background-color: var(--beige);
+  margin: 0 6rem 4rem;    /* left/right margin shows bg behind = rectangle effect */
+  padding: 4rem 3.5rem;
+  border-radius: 2px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: -0.01em;
+}
+
+.skills-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.skills-column h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.skills-column h3::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--terracotta);
+  flex-shrink: 0;
+}
+
+.skills-column ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skills-column ul li {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.6;
+}
+
+/* ============================================
+   DESIGN PHILOSOPHY
+   — Same side margins as skills = rectangle
+   ============================================ */
+.design-philosophy {
+  background-color: var(--black);
+  margin: 0 6rem 5rem;    /* matches skills margin for visual consistency */
+  padding: 5rem 4rem;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.design-philosophy .section-title {
+  color: var(--terracotta);
+  margin-bottom: 1.75rem;
+}
+
+.philosophy-text {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: var(--white);
+  max-width: 620px;
+  margin-inline: auto;
+  line-height: 1.9;
+  opacity: 0.9;
+}
+
+/* ============================================
+   RESPONSIVE — TABLET  (max 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 2.5rem;
+  }
+
+  .page-header {
+    padding: 10rem 2.5rem 4rem;
+  }
+
+  .about-grid {
+    gap: 2.5rem;
+  }
+
+  .profile-placeholder {
+    max-width: 300px;
+  }
+
+  /* Reduce side margins on tablet */
+  .skills-section {
+    margin: 0 3rem 3.5rem;
+    padding: 3.5rem 2.5rem;
+  }
+
+  .design-philosophy {
+    margin: 0 3rem 4rem;
+    padding: 4rem 2.5rem;
+  }
+
+  .skills-columns {
+    gap: 2rem;
+  }
+
+  .about-content {
+    padding: 2rem 0 4rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE  (max 640px)
+   ============================================ */
+@media (max-width: 640px) {
+  .container {
+    padding-inline: 1.25rem;
+  }
+
+  /* Header */
+  .page-header {
+    padding: 9rem 1.25rem 3rem;
+  }
+
+  .page-header h1 {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  /* About grid — stack vertically */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .profile-section {
+    justify-content: center;
+  }
+
+  .profile-placeholder {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .intro-section {
+    padding-top: 0;
+  }
+
+  .intro-section h2 {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+    margin-bottom: 1rem;
+  }
+
+  .intro-section p {
+    font-size: 1rem;
+  }
+
+  /* Skills — no side margin on mobile, full width */
+  .skills-section {
+    margin: 0 1.25rem 3rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .skills-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+    margin-bottom: 2rem;
+  }
+
+  .skills-column ul li {
+    font-size: 1rem;
+  }
+
+  /* Design Philosophy — no side margin on mobile */
+  .design-philosophy {
+    margin: 0 1.25rem 3rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .philosophy-text {
+    font-size: 1rem;
+  }
+}
