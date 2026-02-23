@@ -124,7 +124,7 @@
 }
 
 .preview-text {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 25px;
   font-weight: 200;
   color: var(--black);

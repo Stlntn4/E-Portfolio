@@ -29,8 +29,7 @@
 
 /* ============================================
    PAGE HEADER
-   — Plain white/off-white background (no gradient)
-   — Left-aligned content
+   Desktop: h1 ~7rem, p ~1.2rem, btn ~1.3rem
    ============================================ */
 .page-header {
   background: radial-gradient(ellipse at 20% 50%, #c9c4b0 0%, #d4cfc0 30%, #d8d5ce 55%, #d2d0cd 75%, #cccbca 100%);
@@ -41,19 +40,23 @@
   padding-inline: 3rem;
 }
 
+/* clamp(mobile-floor, fluid, desktop-cap)
+   At 375px: 8vw = 30px. Floor = 1.75rem (28px). Good. */
 .page-header h1 {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 9vw, 7rem);
+  font-size: clamp(1.75rem, 8vw, 7rem);
   font-weight: 400;
   color: var(--black);
   letter-spacing: -0.02em;
   line-height: 1.0;
   margin-bottom: 1rem;
+  margin-top: 4rem;
 }
 
+/* At 375px: 3.5vw = ~13px. Floor = 0.875rem (14px). Fine. */
 .page-header p {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: clamp(0.875rem, 3.5vw, 1.2rem);
   font-weight: 400;
   color: var(--grey);
   max-width: 400px;
@@ -64,7 +67,7 @@
 .page-header .btn {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 3.5vw, 1.3rem);
   font-weight: 500;
   letter-spacing: 0.01em;
   text-decoration: none;
@@ -87,10 +90,11 @@
 
 /* ============================================
    SHARED SECTION TITLE
+   Desktop: 3.5rem | Mobile floor: 1.375rem
    ============================================ */
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.375rem, 4vw, 3.5rem);
   font-weight: 400;
   color: var(--black);
   letter-spacing: -0.01em;
@@ -99,9 +103,6 @@
 
 /* ============================================
    EDUCATION
-   — BEIGE background, full-width
-   — Left-aligned title with terracotta underline
-   — Deeper beige stacked cards
    ============================================ */
 .resume-section {
   background: var(--white);
@@ -139,9 +140,10 @@
   transform: translateX(4px);
 }
 
+/* Desktop: 2.2rem | Mobile floor: 1rem (16px) */
 .resume-item h3 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 2.2rem);
   font-weight: 500;
   color: var(--black);
   letter-spacing: -0.01em;
@@ -149,9 +151,10 @@
   line-height: 1.3;
 }
 
+/* Desktop: 1.2rem | Mobile floor: 0.8125rem (13px) */
 .resume-item .detail {
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: clamp(0.8125rem, 1.8vw, 1.2rem);
   font-weight: 400;
   color: var(--grey);
   margin: 0 0 0.1rem;
@@ -159,7 +162,7 @@
 
 .resume-item .year {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-size: clamp(0.8125rem, 1.8vw, 1.2rem);
   font-weight: 500;
   color: var(--terracotta);
   letter-spacing: 0.04em;
@@ -169,7 +172,7 @@
 
 .resume-item .institution {
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: clamp(0.8125rem, 1.8vw, 1.2rem);
   font-weight: 600;
   color: var(--black);
   margin: 0;
@@ -177,11 +180,6 @@
 
 /* ============================================
    CERTIFICATIONS & TRAINING
-   — White background, full-width
-   — Left-aligned title with terracotta underline
-   — TWO beige cards stacked vertically (1 column)
-   — Terracotta dot before each card heading
-   — Arrow → before each list item
    ============================================ */
 .certifications-section {
   background: var(--white);
@@ -210,16 +208,16 @@
   max-width: 100%;
 }
 
-/* Each column is its own beige card */
 .cert-column {
   background-color: var(--beige);
   padding: 2rem 1.75rem;
   border-radius: 2px;
 }
 
+/* Desktop: 1.7rem | Mobile floor: 0.8125rem */
 .cert-column h3 {
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: clamp(0.8125rem, 2vw, 1.7rem);
   font-weight: 700;
   color: var(--black);
   text-transform: uppercase;
@@ -230,7 +228,6 @@
   gap: 0.5rem;
 }
 
-/* Terracotta filled dot before each heading */
 .cert-column h3::before {
   content: '';
   display: inline-block;
@@ -250,9 +247,10 @@
   gap: 0.5rem;
 }
 
+/* Desktop: 1.3rem | Mobile floor: 0.8125rem */
 .cert-column ul li {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: clamp(0.8125rem, 2vw, 1.3rem);
   font-weight: 400;
   color: var(--black);
   line-height: 1.6;
@@ -342,7 +340,7 @@
 
 .cert-modal-header h4 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: clamp(0.9375rem, 1.5vw, 1.25rem);
   font-weight: 500;
   color: var(--black);
   letter-spacing: -0.01em;
@@ -417,7 +415,7 @@
 
 .cert-modal-placeholder .cert-name {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: clamp(0.9375rem, 1.5vw, 1.35rem);
   font-weight: 500;
   color: var(--black);
   margin: 0;
@@ -426,7 +424,7 @@
 
 .cert-modal-placeholder p {
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 1vw, 0.9rem);
   color: var(--grey);
   line-height: 1.7;
   margin: 0;
@@ -486,9 +484,6 @@
 
 /* ============================================
    TECHNICAL PROFICIENCY
-   — Full-width DARK WARM BROWN from palette
-   — Centered terracotta title
-   — 3-col card grid, left-border accent on each card
    ============================================ */
 .proficiency-section {
   background-color: #1a1a1a;
@@ -515,9 +510,10 @@
   padding-left: 1.25rem;
 }
 
+/* Desktop: 1.5rem | Mobile floor: 0.75rem */
 .proficiency-card h3 {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-size: clamp(0.75rem, 1.4vw, 1.5rem);
   font-weight: 600;
   color: var(--terracotta);
   text-transform: uppercase;
@@ -525,10 +521,11 @@
   margin: 0 0 0.625rem;
 }
 
+/* Desktop: 1.3rem | Mobile floor: 0.8125rem */
 .proficiency-card p {
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 300;
+  font-size: clamp(0.8125rem, 1.2vw, 1.3rem);
+  font-weight: 200;
   color: var(--white);
   line-height: 1.7;
   opacity: 0.88;
@@ -537,9 +534,6 @@
 
 /* ============================================
    PROFESSIONAL SKILLS
-   — DARK WARM BROWN (continuous with Technical Proficiency)
-   — Centered WHITE title
-   — 3-col subtle dark cards
    ============================================ */
 .professional-section {
   background-color: #1a1a1a;
@@ -574,19 +568,21 @@
   background-color: rgba(255, 255, 255, 0.08);
 }
 
+/* Desktop: 1.9rem | Mobile floor: 1rem */
 .professional-card h3 {
   font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: clamp(1rem, 1.8vw, 1.9rem);
+  font-weight: 600;
   color: var(--white);
   letter-spacing: -0.01em;
   margin: 0 0 0.75rem;
   line-height: 1.3;
 }
 
+/* Desktop: ~1.13rem | Mobile floor: 0.8125rem */
 .professional-card p {
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: clamp(0.8125rem, 1vw, 1.1345rem);
   font-weight: 400;
   color: rgba(250, 250, 248, 0.65);
   line-height: 1.7;
@@ -595,10 +591,6 @@
 
 /* ============================================
    CTA SECTION
-   — BEIGE background matching Image 2
-   — Centered dark title + dark body text
-   — Terracotta filled "Download Full Resume" btn
-   — Black outlined "Get In Touch" btn
    ============================================ */
 .cta-section {
   background-color: var(--white);
@@ -607,19 +599,21 @@
   margin-bottom: 0;
 }
 
+/* Desktop: 4rem | Mobile floor: 1.5rem */
 .cta-section h2 {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 400;
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  font-weight: 500;
   color: var(--black);
   letter-spacing: -0.01em;
   margin: 0 0 1.25rem;
   line-height: 1.15;
 }
 
+/* Desktop: 1.3rem | Mobile floor: 0.875rem */
 .cta-section p {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 2vw, 1.3rem);
   font-weight: 400;
   color: var(--grey);
   max-width: 500px;
@@ -635,10 +629,11 @@
   flex-wrap: wrap;
 }
 
+/* Desktop: 1.2rem | Mobile floor: 0.875rem */
 .cta-buttons .btn {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 1.5vw, 1.2rem);
   font-weight: 500;
   letter-spacing: 0.04em;
   text-decoration: none;
@@ -654,7 +649,6 @@
   transform: translateY(-1px);
 }
 
-/* Terracotta "Download Full Resume" */
 .cta-buttons .btn-light {
   background-color: var(--terracotta);
   color: var(--white);
@@ -664,7 +658,6 @@
   color: var(--white);
 }
 
-/* Black outlined "Get In Touch" */
 .cta-buttons .btn-outline-light {
   background-color: transparent;
   color: var(--black);
@@ -715,18 +708,29 @@
 
 /* ============================================
    RESPONSIVE — TABLET PORTRAIT  (max 768px)
+   Sizes should feel comfortable on an iPad
    ============================================ */
 @media (max-width: 768px) {
   .page-header {
     padding: 3.5rem 0 3rem;
   }
 
+  /* ~2.5rem on a 768px tablet — readable hero */
   .page-header h1 {
-    font-size: clamp(3.25rem, 9vw, 5rem);
+    font-size: clamp(1.75rem, 7vw, 3.5rem);
   }
 
   .page-header p {
-    font-size: 0.9rem;
+    font-size: 0.9375rem;
+  }
+
+  .page-header .btn {
+    font-size: 0.9375rem;
+  }
+
+  /* ~1.75rem on tablet */
+  .section-title {
+    font-size: clamp(1.25rem, 4vw, 2.25rem);
   }
 
   .resume-section {
@@ -737,7 +741,17 @@
     padding: 1.375rem 1.5rem;
   }
 
-  /* Certs — stack to 1 column */
+  /* ~1.25rem on tablet */
+  .resume-item h3 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }
+
+  .resume-item .detail,
+  .resume-item .year,
+  .resume-item .institution {
+    font-size: 0.875rem;
+  }
+
   .certifications-section {
     padding: 2.5rem 0 3rem;
   }
@@ -747,7 +761,14 @@
     gap: 1rem;
   }
 
-  /* Proficiency — 2 columns */
+  .cert-column h3 {
+    font-size: 0.875rem;
+  }
+
+  .cert-column ul li {
+    font-size: 0.875rem;
+  }
+
   .proficiency-section {
     padding: 3.5rem 0;
   }
@@ -757,7 +778,14 @@
     gap: 1.5rem;
   }
 
-  /* Professional — 2 columns */
+  .proficiency-card h3 {
+    font-size: 0.875rem;
+  }
+
+  .proficiency-card p {
+    font-size: 0.875rem;
+  }
+
   .professional-section {
     padding: 3rem 0 3.5rem;
   }
@@ -767,8 +795,29 @@
     gap: 1rem;
   }
 
+  .professional-card h3 {
+    font-size: 1.125rem;
+  }
+
+  .professional-card p {
+    font-size: 0.875rem;
+  }
+
   .cta-section {
     padding: 4.5rem 2rem;
+  }
+
+  /* ~1.75rem on tablet */
+  .cta-section h2 {
+    font-size: clamp(1.375rem, 5vw, 2.5rem);
+  }
+
+  .cta-section p {
+    font-size: 0.9375rem;
+  }
+
+  .cta-buttons .btn {
+    font-size: 0.9375rem;
   }
 
   .cert-modal {
@@ -782,6 +831,7 @@
 
 /* ============================================
    RESPONSIVE — MOBILE  (max 640px)
+   Targeting ~375–640px screens
    ============================================ */
 @media (max-width: 640px) {
   .container,
@@ -795,27 +845,35 @@
 
   /* Header */
   .page-header {
-    padding: 3rem 0 2.5rem;
+    padding: 2.5rem 0 2rem;
   }
 
+  /* At 375px: 8vw = 30px = 1.875rem. Cap at 2.25rem (36px). */
   .page-header h1 {
-    font-size: clamp(3rem, 13vw, 4rem);
-    margin-bottom: 0.875rem;
+    font-size: clamp(1.625rem, 8vw, 2.25rem);
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
   }
 
   .page-header p {
     font-size: 0.875rem;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
   }
 
+  .page-header .btn {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  /* At 375px: 5.5vw ≈ 20px = 1.25rem. Good readable section title. */
   .section-title {
-    font-size: clamp(1.75rem, 7vw, 2.25rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(1.125rem, 5.5vw, 1.625rem);
+    margin-bottom: 1.25rem;
   }
 
   /* Education */
   .resume-section {
-    padding: 2.5rem 0;
+    padding: 2rem 0;
   }
 
   .resume-grid {
@@ -823,17 +881,15 @@
   }
 
   .resume-item {
-    padding: 1.25rem 1.25rem;
+    padding: 1rem 1.125rem;
   }
 
+  /* At 375px: 4.5vw ≈ 17px. Good for a card heading. */
   .resume-item h3 {
-    font-size: 1.1rem;
+    font-size: clamp(0.9375rem, 4.5vw, 1.25rem);
   }
 
-  .resume-item .institution {
-    font-size: 0.8125rem;
-  }
-
+  .resume-item .institution,
   .resume-item .detail,
   .resume-item .year {
     font-size: 0.8125rem;
@@ -841,69 +897,83 @@
 
   /* Certifications */
   .certifications-section {
-    padding: 2.5rem 0;
+    padding: 2rem 0;
   }
 
   .cert-columns {
     grid-template-columns: 1fr;
-    gap: 0.875rem;
+    gap: 0.75rem;
   }
 
   .cert-column {
-    padding: 1.5rem 1.25rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .cert-column h3 {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .cert-column ul li {
-    font-size: 0.9rem;
+    font-size: 0.8125rem;
   }
 
-  /* Proficiency — 2 cols on mobile */
+  /* Proficiency — 2 cols */
   .proficiency-section {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
   }
 
   .proficiency-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
+    gap: 1rem;
+  }
+
+  .proficiency-card h3 {
+    font-size: 0.75rem;
+  }
+
+  .proficiency-card p {
+    font-size: 0.8125rem;
   }
 
   /* Professional — 1 col, left-aligned */
   .professional-section {
-    padding: 2.5rem 0 3rem;
+    padding: 2rem 0 2.5rem;
   }
 
   .professional-grid {
     grid-template-columns: 1fr;
-    gap: 0.875rem;
+    gap: 0.75rem;
     max-width: 100%;
   }
 
   .professional-card {
-    padding: 1.5rem 1.25rem;
+    padding: 1.25rem 1rem;
     text-align: left;
   }
 
   .professional-card h3 {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .professional-card p {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
 
   /* CTA */
   .cta-section {
-    padding: 4rem 1.25rem;
+    padding: 3.5rem 1.25rem;
   }
 
+  /* At 375px: 7vw ≈ 26px. Comfortable heading. */
   .cta-section h2 {
-    font-size: clamp(2rem, 9vw, 2.75rem);
-    margin-bottom: 1rem;
+    font-size: clamp(1.25rem, 7vw, 1.875rem);
+    margin-bottom: 0.875rem;
   }
 
   .cta-section p {
-    font-size: 0.9375rem;
-    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    margin-bottom: 1.75rem;
   }
 
   .cta-buttons {
@@ -914,8 +984,9 @@
   .cta-buttons .btn {
     width: 100%;
     max-width: 300px;
-    padding: 0.9rem 1.75rem;
+    padding: 0.8rem 1.5rem;
     text-align: center;
+    font-size: 0.875rem;
   }
 
   /* Modal */
@@ -928,7 +999,7 @@
   }
 
   .cert-modal-header h4 {
-    font-size: 1.05rem;
+    font-size: 0.9375rem;
   }
 
   .cert-modal-body {
@@ -954,10 +1025,44 @@
 
 /* ============================================
    RESPONSIVE — VERY SMALL  (max 480px)
+   Targeting ~320–480px (small Android, iPhone SE)
    ============================================ */
 @media (max-width: 480px) {
+  /* At 375px: 8vw = 30px. Cap at 2rem (32px). */
+  .page-header h1 {
+    font-size: 3rem;
+    margin-top: 4rem;
+  }
+
+  /* At 375px: 5vw = 18.75px. */
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .resume-item h3 {
+    font-size: clamp(0.875rem, 4.5vw, 1.125rem);
+  }
+
+  /* Single column at very small */
   .proficiency-grid {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1rem;
+  }
+
+  .proficiency-card h3 {
+    font-size: 1rem;
+  }
+
+  .proficiency-card p {
+    font-size: 0.8rem;
+  }
+
+  /* At 375px: 6.5vw ≈ 24px */
+  .cta-section h2 {
+    font-size: clamp(1.125rem, 6.5vw, 1.625rem);
+  }
+
+  .cta-section p {
+    font-size: 0.8125rem;
   }
 }
