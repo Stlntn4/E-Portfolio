@@ -1,18 +1,24 @@
-# Sherene Tolentino — E-Portfolio
+<div align="center">
 
-> **Front-End Designer | UI/UX-Focused Web Developer**
+<img src="https://img.shields.io/badge/-%20Sherene%20Tolentino%20-1a1a1a?style=for-the-badge&labelColor=1a1a1a&color=c4795b" height="40"/>
 
-A clean, responsive, and user-centered personal portfolio website showcasing my front-end development and UI/UX design skills, projects, certifications, and professional background.
+**Front-End Designer · UI/UX-Focused Web Developer**
+
+[![Portfolio](https://img.shields.io/badge/View%20Live%20Portfolio-c4795b?style=for-the-badge&logo=googlechrome&logoColor=fafaf8)](https://stlntn4.github.io/E-Portfolio/)
+
+*Designing clean and user-centered web experiences.*
+
+</div>
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/googlechrome.svg" width="20" /> Live Website
+## About Me
 
-[https://stlntn4.github.io/E-Portfolio/](https://stlntn4.github.io/E-Portfolio/)
+I am a front-end designer with a strong interest in UI/UX design and user-centered development. I enjoy planning layouts, designing interfaces, and organizing content to improve user experience. I also have basic knowledge in back-end development and databases and am keen to expand these skills. I continue to learn through personal projects, online courses, and seminars.
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/trello.svg" width="20" /> Pages
+## Pages
 
 | Page | Description |
 |------|-------------|
@@ -24,78 +30,86 @@ A clean, responsive, and user-centered personal portfolio website showcasing my 
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/aboutdotme.svg" width="20" /> About Me
+## Skills
 
-I am a front-end designer with a strong interest in UI/UX design and user-centered development. I enjoy planning layouts, designing interfaces, and organizing content to improve user experience. I also have basic knowledge in back-end development and databases and am keen to expand these skills. I continue to learn through personal projects, online courses, and seminars.
+**Front-End Development**
 
----
-
-## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/skillshare.svg" width="20" /> Skills
-
-**Front-End**
-
-<img src="https://skillicons.dev/icons?i=html,css,js" />
+![HTML5](https://img.shields.io/badge/HTML5-1a1a1a?style=flat-square&logo=html5&logoColor=c4795b)
+![CSS3](https://img.shields.io/badge/CSS3-1a1a1a?style=flat-square&logo=css3&logoColor=8b9d83)
+![JavaScript](https://img.shields.io/badge/JavaScript-1a1a1a?style=flat-square&logo=javascript&logoColor=c4795b)
 
 **Design Tools**
 
-<img src="https://skillicons.dev/icons?i=figma,xd" />
+![Figma](https://img.shields.io/badge/Figma-1a1a1a?style=flat-square&logo=figma&logoColor=c4795b)
+![Adobe XD](https://img.shields.io/badge/Adobe%20XD-1a1a1a?style=flat-square&logo=adobexd&logoColor=8b9d83)
 
-**Back-End / Database (Basic — Learning Focus)**
+**UX / UI**
 
-<img src="https://skillicons.dev/icons?i=nodejs,firebase,mysql" />
+- Wireframing & Prototyping
+- User Research & User Flow
+- Responsive Design
+- Accessibility
+
+**Back-End / Database** *(Basic — Learning Focus)*
+
+![Node.js](https://img.shields.io/badge/Node.js-1a1a1a?style=flat-square&logo=nodedotjs&logoColor=8b9d83)
+![Firebase](https://img.shields.io/badge/Firebase-1a1a1a?style=flat-square&logo=firebase&logoColor=c4795b)
+![MySQL](https://img.shields.io/badge/SQL-1a1a1a?style=flat-square&logo=mysql&logoColor=8b9d83)
 
 **Soft Skills**
-Creativity · Problem Solving · Attention to Detail · Communication · Time Management
+
+- Creativity & Attention to Detail
+- Problem Solving
+- Time Management
+- Effective Communication
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/blueprint.svg" width="20" /> Projects
+## Projects
 
-### Personal Portfolio UI Design
-A minimal and professional portfolio website designed in Figma, focusing on layout structure, typography hierarchy, and usability for job applications.
+**Personal Portfolio UI Design**
+> A minimal and professional portfolio website designed in Figma, focusing on layout structure, typography hierarchy, and usability for job applications.
 
-### Café Website UI/UX Concept
-A responsive website design concept for a café business, emphasizing clear navigation, accessible menus, and smooth user flow across sections.
+**Café Website UI/UX Concept**
+> A responsive website design concept for a café business, emphasizing clear navigation, accessible menus, and smooth user flow across sections.
 
-### Landing Page Design Concept
-A front-end landing page mockup designed to highlight call-to-action placement, spacing, and responsive behavior across screen sizes.
+**Landing Page Design Concept**
+> A front-end landing page mockup designed to highlight call-to-action placement, spacing, and responsive behavior across screen sizes.
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/academia.svg" width="20" /> Education
+## Education
 
 **Bachelor of Science in Information Technology**
 *(Current Student)*
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/freecodecamp.svg" width="20" /> Certifications & Badges
+## Certifications & Badges
 
 **FreeCodeCamp**
 
-![Responsive Web Design](https://img.shields.io/badge/Responsive%20Web%20Design-0A0A23?style=for-the-badge&logo=freecodecamp&logoColor=white)
-![JavaScript Algorithms](https://img.shields.io/badge/JavaScript%20Algorithms%20%26%20Data%20Structures-0A0A23?style=for-the-badge&logo=freecodecamp&logoColor=white)
+![Responsive Web Design](https://img.shields.io/badge/Responsive%20Web%20Design-1a1a1a?style=flat-square&logo=freecodecamp&logoColor=8b9d83)
+![JavaScript Algorithms](https://img.shields.io/badge/JS%20Algorithms%20%26%20Data%20Structures-1a1a1a?style=flat-square&logo=freecodecamp&logoColor=8b9d83)
 
 **Seminars & Workshops**
 
-![UI/UX Design](https://img.shields.io/badge/UI%2FUX%20Design%20Seminar-6C63FF?style=for-the-badge&logo=figma&logoColor=white)
-![Web Dev Workshop](https://img.shields.io/badge/Web%20Development%20Workshop-264DE4?style=for-the-badge&logo=html5&logoColor=white)
+![UI/UX Seminar](https://img.shields.io/badge/UI%2FUX%20Design%20Seminar-1a1a1a?style=flat-square&logo=figma&logoColor=c4795b)
+![Web Dev Workshop](https://img.shields.io/badge/Web%20Development%20Workshop-1a1a1a?style=flat-square&logo=html5&logoColor=c4795b)
 
 ---
 
-## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/maildotru.svg" width="20" /> Contact
+## Contact
 
-[![Email](https://img.shields.io/badge/Email-sherenetolentino@email.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sherenetolentino@email.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](#)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](#)
-[![Behance](https://img.shields.io/badge/Behance-Portfolio-1769FF?style=for-the-badge&logo=behance&logoColor=white)](#)
-
----
-
-## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/opensourceinitiative.svg" width="20" /> License
-
-© 2025 Sherene Tolentino. All rights reserved.
+[![Email](https://img.shields.io/badge/sherenetolentino@email.com-1a1a1a?style=flat-square&logo=gmail&logoColor=c4795b)](mailto:sherenetolentino@email.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-1a1a1a?style=flat-square&logo=linkedin&logoColor=8b9d83)](#)
+[![GitHub](https://img.shields.io/badge/GitHub-1a1a1a?style=flat-square&logo=github&logoColor=fafaf8)](#)
+[![Behance](https://img.shields.io/badge/Behance-1a1a1a?style=flat-square&logo=behance&logoColor=8b9d83)](#)
 
 ---
 
-*Designing clean and user-centered web experiences.*
+<div align="center">
+
+© 2025 Sherene Tolentino · All rights reserved.
+
+</div>
