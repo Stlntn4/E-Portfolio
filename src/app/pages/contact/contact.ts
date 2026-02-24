@@ -28,12 +28,15 @@ export class Contact {
   sendSuccess = false;
   sendError = false;
 
-  // ── Replace these with your actual EmailJS credentials ──
-  private SERVICE_ID  = 'YOUR_SERVICE_ID';
-  private TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-  private PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+  // ── Updated with your actual EmailJS credentials from screenshots ──
+  private SERVICE_ID  = 'service_6iyb12z';        // From your screenshot
+  private TEMPLATE_ID = 'template_y45bo4c';       // From your screenshot
+  private PUBLIC_KEY  = 'D8msF66txiCIUbVJx';      // From your screenshot
 
   constructor(private fb: FormBuilder, public themeService: ThemeService) {
+    // Initialize EmailJS with your public key
+    emailjs.init(this.PUBLIC_KEY);
+    
     this.contactForm = this.fb.group({
       fullName: ['', Validators.required],
       email:    ['', [Validators.required, Validators.email]],
@@ -58,15 +61,16 @@ export class Contact {
     const { fullName, email, message } = this.contactForm.value;
 
     // These keys must match the variables in your EmailJS template
+    // From your screenshots, your template uses: {{fullName}}, {{email}}, {{message}}
     const templateParams = {
-      from_name:  fullName,
-      from_email: email,
-      message:    message,
-      to_email:   'sherene.tolentino4@gmail.com'
+      fullName: fullName,    // Changed from from_name to match your template
+      email: email,          // Changed from from_email to match your template
+      message: message       // This matches your template
+      // to_email is not needed as it's set in the EmailJS template
     };
 
     emailjs
-      .send(this.SERVICE_ID, this.TEMPLATE_ID, templateParams, this.PUBLIC_KEY)
+      .send(this.SERVICE_ID, this.TEMPLATE_ID, templateParams)
       .then(() => {
         this.isSending = false;
         this.sendSuccess = true;

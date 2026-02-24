@@ -190,6 +190,45 @@ textarea.form-control {
 }
 
 /* ============================================
+   FORM ALERTS (success / error feedback)
+   ============================================ */
+.alert {
+  padding: 1rem 1.25rem;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  border-left: 3px solid transparent;
+}
+
+.alert-success {
+  background-color: rgba(139, 157, 131, 0.15);
+  color: #4a6b42;
+  border-left-color: var(--sage);
+}
+
+.alert-error {
+  background-color: rgba(196, 121, 91, 0.1);
+  color: #a0522d;
+  border-left-color: var(--terracotta);
+}
+
+.alert-error a {
+  color: var(--terracotta);
+  text-decoration: underline;
+}
+
+/* Validation Styles */
+.invalid-feedback {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: #c0392b;
+  margin-top: 0.25rem;
+}
+
+/* ============================================
    INFO SECTION
    ============================================ */
 .info-section {
@@ -311,36 +350,6 @@ textarea.form-control {
   padding: 0.5rem 1.25rem;
   border-radius: 100px;
   letter-spacing: 0.02em;
-}
-
-/* ============================================
-   FORM ALERTS (success / error feedback)
-   ============================================ */
-.form-alert {
-  font-family: var(--font-body);
-  font-size: 0.9375rem;
-  font-weight: 400;
-  padding: 1rem 1.25rem;
-  border-radius: 2px;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-
-.form-alert--success {
-  background-color: rgba(139, 157, 131, 0.15);
-  color: #4a6b42;
-  border-left: 3px solid var(--sage);
-}
-
-.form-alert--error {
-  background-color: rgba(196, 121, 91, 0.1);
-  color: #a0522d;
-  border-left: 3px solid var(--terracotta);
-}
-
-.form-alert--error a {
-  color: var(--terracotta);
-  text-decoration: underline;
 }
 
 /* ============================================
