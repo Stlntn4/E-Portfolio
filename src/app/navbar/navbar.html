@@ -1,25 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
      [class.scrolled]="isScrolled">
   <div class="container">
-    <!-- Navbar Brand with Logo -->
-    <a class="navbar-brand" routerLink="/">
+
+    <!-- Brand LEFT -->
+    <a class="navbar-brand" routerLink="/" (click)="closeMenu()">
       <img src="assets/images/logo.png" alt="Logo" class="logo-placeholder">
       Sherene Tolentino
     </a>
 
-    <!-- Hamburger Toggler for Mobile -->
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navbar Links -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
+    <!-- Desktop Nav — visible only on lg and up -->
+    <div class="desktop-nav">
+      <ul class="navbar-nav align-items-center">
         <li class="nav-item">
           <a class="nav-link"
              routerLink="/"
@@ -38,21 +29,80 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
         </li>
-        <li class="nav-item ms-lg-3">
+        <li class="nav-item ms-3">
           <a class="nav-link btn-hire" routerLink="/contact">Hire Me</a>
         </li>
-        <!-- Theme Toggle — sits at far right alongside nav links -->
-        <li class="nav-item ms-lg-2">
-          <button
-            class="theme-toggle"
-            (click)="themeService.toggleTheme()"
-            [attr.aria-label]="themeService.isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
-            [title]="themeService.isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
-          >
-            {{ themeService.isDarkMode ? '☀️' : '🌙' }}
+        <li class="nav-item ms-2">
+          <button class="theme-toggle"
+                  (click)="themeService.toggleTheme()"
+                  [attr.aria-label]="themeService.isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+                  [title]="themeService.isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
+            {{ themeService.isDarkMode ? '☀︎' : '⏾' }}
           </button>
         </li>
       </ul>
     </div>
+
+    <!-- Hamburger — visible only on mobile -->
+    <button class="navbar-toggler" type="button"
+            (click)="toggleMenu()"
+            [attr.aria-expanded]="isMenuOpen"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" [class.open]="isMenuOpen"></span>
+    </button>
+
   </div>
 </nav>
+
+<!-- Dark overlay behind the drawer -->
+<div class="drawer-overlay" [class.active]="isMenuOpen" (click)="closeMenu()"></div>
+
+<!-- Right-side slide-in drawer -->
+<div class="mobile-drawer" [class.open]="isMenuOpen">
+
+  <!-- Drawer Header -->
+  <div class="drawer-header">
+    <span class="drawer-brand">Menu</span>
+    <button class="drawer-close" (click)="closeMenu()" aria-label="Close menu">✕</button>
+  </div>
+
+  <!-- Drawer Links -->
+  <nav class="drawer-nav">
+    <a class="drawer-link"
+       routerLink="/"
+       routerLinkActive="drawer-active"
+       [routerLinkActiveOptions]="{ exact: true }"
+       (click)="closeMenu()">Home</a>
+
+    <a class="drawer-link"
+       routerLink="/about"
+       routerLinkActive="drawer-active"
+       (click)="closeMenu()">About</a>
+
+    <a class="drawer-link"
+       routerLink="/projects"
+       routerLinkActive="drawer-active"
+       (click)="closeMenu()">Projects</a>
+
+    <a class="drawer-link"
+       routerLink="/resume"
+       routerLinkActive="drawer-active"
+       (click)="closeMenu()">Resume</a>
+
+    <a class="drawer-link"
+       routerLink="/contact"
+       routerLinkActive="drawer-active"
+       (click)="closeMenu()">Contact</a>
+  </nav>
+
+  <!-- Drawer Footer Actions -->
+  <div class="drawer-footer">
+    <a class="drawer-hire" routerLink="/contact" (click)="closeMenu()">Hire Me</a>
+    <button class="theme-toggle drawer-theme"
+            (click)="themeService.toggleTheme()"
+            [attr.aria-label]="themeService.isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
+      {{ themeService.isDarkMode ? '☀︎ Light Mode' : '⏾ Dark Mode' }}
+    </button>
+  </div>
+
+</div>

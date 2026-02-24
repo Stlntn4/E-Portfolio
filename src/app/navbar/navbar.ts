@@ -14,12 +14,21 @@ import { ThemeService } from '../services/theme.service';
 export class Navbar {
 
   isScrolled = false;
+  isMenuOpen = false;
 
   constructor(public themeService: ThemeService) {}
 
   @HostListener('window:scroll')
   onWindowScroll() {
     this.isScrolled = window.scrollY > 50;
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 
 }
