@@ -1,59 +1,101 @@
-# SherenePortfolio
+# Sherene Tolentino — E-Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.3.
+> **Front-End Designer | UI/UX-Focused Web Developer**
 
-## Development server
+A clean, responsive, and user-centered personal portfolio website showcasing my front-end development and UI/UX design skills, projects, certifications, and professional background.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/googlechrome.svg" width="20" /> Live Website
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+[https://stlntn4.github.io/E-Portfolio/](https://stlntn4.github.io/E-Portfolio/)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/trello.svg" width="20" /> Pages
 
-```bash
-ng generate component component-name
-```
+| Page | Description |
+|------|-------------|
+| **Home** | Landing page with hero section, skills, and badges |
+| **About Me** | Bio, technical skills, soft skills, and certifications |
+| **Projects** | Portfolio of UI/UX and front-end design work |
+| **Resume** | Education, experience, and downloadable resume |
+| **Contact** | Contact form and social links |
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/aboutdotme.svg" width="20" /> About Me
 
-## Building
+I am a front-end designer with a strong interest in UI/UX design and user-centered development. I enjoy planning layouts, designing interfaces, and organizing content to improve user experience. I also have basic knowledge in back-end development and databases and am keen to expand these skills. I continue to learn through personal projects, online courses, and seminars.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/skillshare.svg" width="20" /> Skills
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+**Front-End**
 
-## Running unit tests
+<img src="https://skillicons.dev/icons?i=html,css,js" />
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+**Design Tools**
 
-```bash
-ng test
-```
+<img src="https://skillicons.dev/icons?i=figma,xd" />
 
-## Running end-to-end tests
+**Back-End / Database (Basic — Learning Focus)**
 
-For end-to-end (e2e) testing, run:
+<img src="https://skillicons.dev/icons?i=nodejs,firebase,mysql" />
 
-```bash
-ng e2e
-```
+**Soft Skills**
+Creativity · Problem Solving · Attention to Detail · Communication · Time Management
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/blueprint.svg" width="20" /> Projects
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Personal Portfolio UI Design
+A minimal and professional portfolio website designed in Figma, focusing on layout structure, typography hierarchy, and usability for job applications.
+
+### Café Website UI/UX Concept
+A responsive website design concept for a café business, emphasizing clear navigation, accessible menus, and smooth user flow across sections.
+
+### Landing Page Design Concept
+A front-end landing page mockup designed to highlight call-to-action placement, spacing, and responsive behavior across screen sizes.
+
+---
+
+## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/academia.svg" width="20" /> Education
+
+**Bachelor of Science in Information Technology**
+*(Current Student)*
+
+---
+
+## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/freecodecamp.svg" width="20" /> Certifications & Badges
+
+**FreeCodeCamp**
+
+![Responsive Web Design](https://img.shields.io/badge/Responsive%20Web%20Design-0A0A23?style=for-the-badge&logo=freecodecamp&logoColor=white)
+![JavaScript Algorithms](https://img.shields.io/badge/JavaScript%20Algorithms%20%26%20Data%20Structures-0A0A23?style=for-the-badge&logo=freecodecamp&logoColor=white)
+
+**Seminars & Workshops**
+
+![UI/UX Design](https://img.shields.io/badge/UI%2FUX%20Design%20Seminar-6C63FF?style=for-the-badge&logo=figma&logoColor=white)
+![Web Dev Workshop](https://img.shields.io/badge/Web%20Development%20Workshop-264DE4?style=for-the-badge&logo=html5&logoColor=white)
+
+---
+
+## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/maildotru.svg" width="20" /> Contact
+
+[![Email](https://img.shields.io/badge/Email-sherenetolentino@email.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sherenetolentino@email.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](#)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](#)
+[![Behance](https://img.shields.io/badge/Behance-Portfolio-1769FF?style=for-the-badge&logo=behance&logoColor=white)](#)
+
+---
+
+## <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/opensourceinitiative.svg" width="20" /> License
+
+© 2025 Sherene Tolentino. All rights reserved.
+
+---
+
+*Designing clean and user-centered web experiences.*
