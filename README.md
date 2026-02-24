@@ -110,6 +110,6 @@ I am a front-end designer with a strong interest in UI/UX design and user-center
 
 <div align="center">
 
-© 2025 Sherene Tolentino · All rights reserved.
+© 2026 Sherene Tolentino · All rights reserved.
 
 </div>
